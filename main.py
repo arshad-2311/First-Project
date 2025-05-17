@@ -120,7 +120,7 @@ async def view_doctoe_appointments(doctor_id: int,db: db_dependency):
     for appointment in appointments:
         if appointment.doctor_id == doctor_id:
             for patient in patients:
-                if patient.id == appointment.doctor_id:
+                if patient.id == appointment.patient_id:
                     result.append({
                         'appointment_id': 100 + appointment.id,
                         'patient name': patient.name,
