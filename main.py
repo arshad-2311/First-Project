@@ -112,7 +112,7 @@ async def view_patient_appointment(patient_id : int, db: db_dependency):
 
     
 @app.get("/appointments/doctor/{doctor_id}")
-async def view_doctoe_appointments(doctor_id: int,db: db_dependency):
+async def view_doctor_appointments(doctor_id: int,db: db_dependency):
     patients = db.query(models.users).all()
     appointments = db.query(models.appointments).all()
     result = []
